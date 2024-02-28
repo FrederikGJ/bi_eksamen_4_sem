@@ -65,4 +65,11 @@ deactivate
 streamlit run app.py
 ```
 
+## pip install
+```bash
+pip install streamlit pandas matplotlib seaborn 
+```
+
+if on mac isntall watchdog with pip as well 
+
 ### in your terminal - then the app runs in the browser
