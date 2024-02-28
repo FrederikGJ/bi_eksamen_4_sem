@@ -19,27 +19,7 @@ Natasja Karoline Duckfeldt Vitoft Nordstedt
 
 ## Introduction
 
-Somethihng with health data and predictive modeling...
-
-We calcualte the mean of our data -
-
-<img src="https://latex.codecogs.com/svg.image?\bar{x}&space;=&space;\frac{1}{n}\sum_{i=1}^{n}x_i" title="\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i" />
-
-```python
-mean = sum(data) / len(data)
-```
-
-The mean of height data is ???
-
-We calculate the variance of our data -
-
-<img src="https://latex.codecogs.com/svg.image?s^2&space;=&space;\frac{1}{n-1}\sum_{i=1}^{n}(x_i&space;-&space;\bar{x})^2" title="s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2" />
-
-```python
-variance = sum((x - mean) ** 2 for x in data) / (len(data) - 1)
-```
-
-The variance of height data is ???
+The purpose of this project is to create a web application that can be used to analyze and visualize data.
 
 ## App environment setup
 
