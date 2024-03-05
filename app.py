@@ -1,6 +1,8 @@
 import streamlit as st
 from pages import descriptive_stats, introduction, cleaning_data, pca, regression, machine_learning  # Importer siderne
 
+# lolo frederiks branch
+
 # Funktioner for hver side
 pages = {
     "Introduction": introduction.show,
