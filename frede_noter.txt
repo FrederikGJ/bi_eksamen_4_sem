@@ -10,3 +10,8 @@ https://www.dst.dk/da/OmDS/strategi-og-kvalitet/kvalitet-for-statistikproduktion
 https://www.dst.dk/da/OmDS/strategi-og-kvalitet/kvalitet-for-statistikproduktion/kvalitetspolitik
 
 ***********
+
+suicide note collection til tf-idf 
+
+https://github.com/CodeWritingCow/suicide-notes/tree/master/collection
+
