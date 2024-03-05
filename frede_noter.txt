@@ -1,5 +1,7 @@
 noter om datakvalitet 
 
+vi kan sammenligne det data vi bruger op mod de 16 principper for statistik fra eurostat
+
 :::::
 
 https://www.dst.dk/da/OmDS/strategi-og-kvalitet/kvalitet-for-statistikproduktion/kvalitet-i-officiel-statistik
