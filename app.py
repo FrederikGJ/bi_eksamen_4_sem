@@ -10,7 +10,6 @@ pages = {
     "PCA": pca.show,
     "Regression": regression.show,
     "Machine learning": machine_learning.show,
-
 }
 
 # Hovedapp
