@@ -6,7 +6,7 @@ def show():
     st.subheader("Group:")
 
     st.write("Group: OLA_Gruppe14")
-
+    
     st.write("Group Members:")
     st.write("- Frederik Geisler Johannessen")
     st.write("- Signe Krusell Larsen")
