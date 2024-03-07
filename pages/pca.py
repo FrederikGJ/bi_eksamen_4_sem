@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+import numpy as np
 
 def show():
     st.title("Principal Component Analysis with Singular Value Decomposition")
@@ -17,24 +20,13 @@ def show():
     # Filter the data to keep only the entries from the year 2014
     data_2014 = data[data['year'] == 2014]
 
-    st.write("Data from 2014 only")
-    st.write(data_2014.head())
-
     # Convert 'male' to 1 and 'female' to 0
-    st.write("Convert gender data to numeric values (female 0 and male 1)")
+    st.write("We choose the data from 2014 and convert gender data to numeric values (female 0 and male 1)")
     data_2014['sex'] = data_2014['sex'].map({'male': 1, 'female': 0})
-    st.write(data_2014.head())
 
     # Remove columns with all NaN values 
     data_2014 = data_2014.dropna(axis=1, how='all')
 
-    # Remove columns where all values in column are 0
-    data_2014 = data_2014.loc[:, (data_2014 != 0).any(axis=0)]
-
-    # Replace non-numeric (NaN) values with 0
-    data_2014 = data_2014.apply(pd.to_numeric, errors='coerce').fillna(0)
-
-    st.write("Data after cleaning")
     st.write(data_2014.head())
 
  
