@@ -1,5 +1,8 @@
-noter om datakvalitet 
+Beskriv de skridt derer i PCA - 
+vis et pca plot for pc 1 - som et eksempel 
+vælg de pc der forklarer mest varians 
 
+noter om datakvalitet 
 vi kan sammenligne det data vi bruger op mod de 16 principper for statistik fra eurostat
 
 :::::
