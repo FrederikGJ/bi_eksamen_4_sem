@@ -1,69 +1,29 @@
 import streamlit as st
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 def show():
-    # Indlæs data
-    data = pd.read_csv('data/csv/SDGSUICIDE.csv')
-    data1 = pd.read_csv('data/csv/suicide.csv')
-    data2 = pd.read_csv('data/csv/facilities2016.csv', delimiter= ';', na_values=[''])
-    data3 = pd.read_csv('data/csv/humanResources2016.csv', delimiter= ';', na_values=[''])
-
     # App titel
     st.title("This page contains Descriptive statistics")
+    
+    # Access the cleaned data from the session state
+    cleaned_data = st.session_state.cleaned_data
+    cleaned_data1 = st.session_state.cleaned_data1
+    cleaned_data2 = st.session_state.cleaned_data2
+    cleaned_data3 = st.session_state.cleaned_data3
 
-    # Rå data preview
-    st.subheader("Raw data preview")
-    st.write("Tabel 1: Suicide data from 2019")
-    st.write(data.head())
-    st.write("Tabel 2: Suicide data from 1987 - 2016")
-    st.write(data1.head())
-    st.write("Tabel 3: Mental health facilities data from 2016")
-    st.write(data2.head()) 
-    st.write("Tabel 4: Human ressources data from 2016")
-    st.write(data3.head())
+    # Display the cleaned data
+    st.write(cleaned_data)
+    st.write(cleaned_data1)
+    st.write(cleaned_data2)
+    st.write(cleaned_data3)
 
-    # Renset data preview
-    st.subheader("Cleaned data preview")
 
-    st.write("Tabel 1: Suicide data from 2019")
-    st.write("Sex have been set to both genders (BTSX). Useless columns have been removed. Rows  with null values have been removed.")
-    columns_to_remove = ['GHO (CODE)', 'GHO (DISPLAY)', 'GHO (URL)', 'PUBLISHSTATE (CODE)', 'PUBLISHSTATE (DISPLAY)', 'PUBLISHSTATE (URL)', 'YEAR (CODE)', 'YEAR (URL)', 'REGION (CODE)', 'REGION (URL)', 'WORLDBANKINCOMEGROUP (CODE)', 'WORLDBANKINCOMEGROUP (URL)', 'COUNTRY (CODE)', 'COUNTRY (URL)', 'AGEGROUP (CODE)', 'AGEGROUP (URL)','SEX (DISPLAY)' 'SEX (URL)', 'Low', 'High', 'StdErr', 'StdDev', 'Comments']
-    remove_columns = data.drop(columns=columns_to_remove, errors='ignore')
-    cleaned_data = remove_columns[remove_columns['SEX (CODE)'] == 'BTSX'].dropna(axis=1, how='all')
-    st.write(cleaned_data.head())
-
-    st.write("Tabel 2: Suicide data from 1987 - 2016")
-    st.write("Useless columns have been removed. Rows  with null values have been removed.")
-    columns_to_remove1 = ['year', 'suicides_no','country-year', 'HDI for year']
-    remove_columns1 = data1.drop(columns = columns_to_remove1, errors ='ignore')
-    cleaned_data1 = remove_columns1.dropna(axis=1, how='all')
-    st.write(cleaned_data1.head())
-
-    st.write("Tabel 3: Mental health facilities data from 2016")
-    st.write("Useless columns have been removed. Rows  with null values have been removed (this has removed some countries).")
-    columns_to_remove2 = ['Year']
-    remove_columns2 = data2.drop(columns = columns_to_remove2, errors ='ignore')
-    cleaned_data2 = remove_columns2.dropna()
-    st.write(cleaned_data2.head())
-
-    st.write("Tabel 4: Human ressources data from 2016")
-    st.write("Useless columns have been removed. Rows  with null values have been removed (this has removed some countries).")
-    columns_to_remove3 = ['Year'] 
-    remove_columns3 = data3.drop(columns = columns_to_remove3, errors ='ignore')
-    cleaned_data3 = remove_columns3.dropna()
-    st.write(cleaned_data3.head())
-
-    st.divider()
-
-    # Forklaring af datakvalitetsudfordringer
-    st.write("Confounders: In the data we are using from WHO, there are serious confounders. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with things like the CPR number, centralised source taxation, and so on. These measures ensure accurate data tracking of every single individual and company in the country.")
-
-    st.divider()
 
     # Deskriptiv statistik
     st.subheader("Descriptive data on the suicide rates in the cleaned data set")
+    st.write("Here we are calculation descriptive statistics for each data set. Count, Mean, Standard Deviation, Minumun, 25th Percentile, 50th Percentile, 75th Percentile and Maximum")
+
 
     desc_stats = cleaned_data['Numeric'].describe()    
     n = desc_stats['count']
@@ -131,22 +91,24 @@ def show():
     plt.xticks(rotation=45, ha="right")
     st.pyplot(plt)
 
-    #Tabel 3
+   # For Tabel 3 - Histogram for Mental health facilities data
     plt.figure(figsize=(10, 6))
-    sns.boxplot(x='Countries, territories and areas', y='Mental hospitals (per 100 000 population)', data=cleaned_data2)
-    plt.title('Distribution of Mental hospitals per 100,000 by Region in 2016')
-    plt.xlabel('Countries, territories and areas')
-    plt.ylabel('Mental hospitals (per 100 000 population)')
+    
+    plt.barh(cleaned_data2['Countries, territories and areas'], cleaned_data2['Mental health units in general hospitals (per 100 000 population)'], color='blue')
+    plt.title('Histogram of Mental health units in general hospitals per 100,000 in 2016')
+    plt.xlabel('Mental health units in general hospitals (per 100 000 population)')
+    plt.ylabel('Countries, territories and areas')
     plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
     st.pyplot(plt)
 
-    #Tabel 4
+# For Tabel 4 - Histogram for Human resources data
     plt.figure(figsize=(10, 6))
-    sns.boxplot(x='Countries, territories and areas', y='Psychiatrists working in mental health sector (per 100 000 population)', data=cleaned_data3)
-    plt.title('Distribution of Human resources per 100,000 by Region in 2016')
-    plt.xlabel('Countries, territories and areas')
-    plt.ylabel('Psychiatrists working in mental health sector (per 100 000 population)')
-    plt.xticks(rotation=45, ha="right")
+    plt.hist(cleaned_data3['Psychiatrists working in mental health sector (per 100 000 population)'], color='blue', bins=20)  # Tilpasser antallet af bins efter behov
+    plt.title('Histogram of Psychiatrists working in mental health sector per 100,000 in 2016')
+    plt.xlabel('Psychiatrists working in mental health sector (per 100 000 population)')
+    plt.ylabel('Frequency')
+    plt.tight_layout()
     st.pyplot(plt)
 
     
