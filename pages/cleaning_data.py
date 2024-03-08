@@ -31,7 +31,7 @@ def show():
     cleaned_data = remove_columns[remove_columns['SEX (CODE)'] == 'BTSX'].dropna(axis=1, how='all')
     st.write(cleaned_data.head())
     st.session_state.cleaned_data = cleaned_data
-
+    
 
     st.write("Tabel 2: Suicide data from 1987 - 2016")
     st.write("Useless columns have been removed. Rows  with null values have been removed.")

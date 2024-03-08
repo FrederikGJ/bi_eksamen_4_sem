@@ -4,7 +4,8 @@ import seaborn as sns
 
 def show():
     # App titel
-    st.title("This page contains Descriptive statistics")
+    st.title("Descriptive statistics")
+    st.write("In this section we will calculate descriptive statistics for the cleaned data sets.")
     
     # Access the cleaned data from the session state
     cleaned_data = st.session_state.cleaned_data
@@ -13,36 +14,43 @@ def show():
     cleaned_data3 = st.session_state.cleaned_data3
 
     # Display the cleaned data
+    st.write("Tabel 1: Suicide data from 2019")
     st.write(cleaned_data)
+    st.write("Tabel 2: Suicide data from 1987 - 2016")
     st.write(cleaned_data1)
+    st.write("Tabel 3: Mental health facilities data from 2016")
     st.write(cleaned_data2)
+    st.write("Tabel 4: Human ressources data from 2016")
     st.write(cleaned_data3)
 
 
 
     # Deskriptiv statistik
     st.subheader("Descriptive data on the suicide rates in the cleaned data set")
-    st.write("Here we are calculation descriptive statistics for each data set. Count, Mean, Standard Deviation, Minumun, 25th Percentile, 50th Percentile, 75th Percentile and Maximum")
-
-
+    st.write("Calculations of the estimated mean and standard deviation for Tabel 1. ")
+    
+    # Tabel 1
     desc_stats = cleaned_data['Numeric'].describe()    
     n = desc_stats['count']
     mean_value = desc_stats['mean']
     std_dev = desc_stats['std']
     sum_x_minus_mean_squared = ((cleaned_data['Numeric'] - mean_value)**2).sum()
 
+    # Tabel2
     desc_stats = cleaned_data1['suicides/100k pop'].describe()    
     n = desc_stats['count']
     mean_value = desc_stats['mean']
     std_dev = desc_stats['std']
     sum_x_minus_mean_squared = ((cleaned_data1['suicides/100k pop'] - mean_value)**2).sum()
    
+   # Tabel 3
     desc_stats = cleaned_data2['Mental health units in general hospitals (per 100 000 population)'].describe()    
     n = desc_stats['count']
     mean_value = desc_stats['mean']
     std_dev = desc_stats['std']
     sum_x_minus_mean_squared = ((cleaned_data2['Mental health units in general hospitals (per 100 000 population)'] - mean_value)**2).sum()
    
+   # Tabel 4
     desc_stats = cleaned_data3['Psychiatrists working in mental health sector (per 100 000 population)'].describe()    
     n = desc_stats['count']
     mean_value = desc_stats['mean']
