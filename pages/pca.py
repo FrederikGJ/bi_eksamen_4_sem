@@ -35,7 +35,9 @@ def show():
 
     features = data_2014.drop(columns=['country'])
 
-    pca, data_scaled = apply_pca(features)
+    numeric_features = data_2014.select_dtypes(include=[np.number]) # Make sure this is defined
+    pca, data_scaled, loadings = apply_pca(features, numeric_features) 
+
 
     st.divider()
 
@@ -51,9 +53,16 @@ def show():
     st.pyplot(fig)
     
     # Make new dataframe that has the first 4 principal components
-    st.write('First 4 principal components')
+    st.write('First 4 principal components - projection of each data point onto the principal components.')
     pca_df = pd.DataFrame(pca.transform(data_scaled)[:, :4], columns=[f'PC{i}' for i in range(1, 5)])
     st.write(pca_df)
+
+    st.subheader('Loading scores')
+    loadings_df = pd.DataFrame(loadings,  
+        columns=numeric_features.columns, 
+        index=[f'PC{i}' for i in range(1, n_components + 1)])
+    st.write(loadings_df)
+
 
     st.divider()
 
@@ -65,7 +74,7 @@ def show():
 
  
 
-def apply_pca(data, n_components=None):
+def apply_pca(data,numeric_features, n_components=None):
     # Ensure data is numeric
     numeric_features = data.select_dtypes(include=[np.number])
     
@@ -80,5 +89,8 @@ def apply_pca(data, n_components=None):
     # Apply PCA
     pca = PCA(n_components=n_components)
     pca.fit(data_scaled) 
-    
-    return pca, data_scaled
+
+    # Get loading scores
+    loadings = pca.components_
+
+    return pca, data_scaled, loadings 
