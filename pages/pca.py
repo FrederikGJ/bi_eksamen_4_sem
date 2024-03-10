@@ -51,6 +51,7 @@ def show():
     ax.set_ylabel('Explained Variance Ratio')
     ax.set_title('PCA - Explained Variance Ratio - scree plot')
     st.pyplot(fig)
+    st.write("The plot shows the eigenvalues of the each principal component. The eigenvalues are the variance of the original data projected onto the principal components. ")
     
     # Make new dataframe that has the first 4 principal components
     st.write('First 4 principal components - projection of each data point onto the principal components.')
@@ -63,14 +64,29 @@ def show():
         index=[f'PC{i}' for i in range(1, n_components + 1)])
     st.write(loadings_df)
 
-
+    st.write("Loading scores are the weights of the original features in the principal components. They are used to interpret the principal components. The loading scores are the coefficients of the linear combination of the original features that make up the principal components. They are also called the eigenvectors of the covariance matrix of the original features. The loading scores are the weights of the original features in the principal components. They are used to interpret the principal components. The loading scores are the coefficients of the linear combination of the original features that make up the principal components.")
     st.divider()
 
+    st.subheader("Interpretation of Loading Scores of the First Two Principal Components")
 
+    st.write("**PC1**")
+    st.write("""
+    * **Positive loadings:**
+        * suicides/100k pop: Higher loadings here suggest PC1 is likely influenced by variations in suicide rates per capita.
+        * population: A positive loading here means that countries with higher populations tend to also have higher suicide rates per capita (as reflected in the suicides/100k pop feature). 
+    * **Negative loading:** 
+        * HDI for year: A negative loading here suggests that countries with higher Human Development Index (HDI) tend to have lower suicide rates per capita (reflected in the suicides/100k pop feature). 
+    """)
 
-
-
-
+    st.write("**PC2**")
+    st.write("""
+    * **Positive loadings:**
+        * gdp_per_capita ($): Countries with higher GDP per capita tend to have higher scores on PC2.
+    * **Negative loadings:**
+        * suicides_no: Negative loading indicates that higher numbers of suicides are associated with lower scores on PC2.
+    """) 
+    st.write("The above interpretation tells us that highler living standards and GDP pr capita leads to fewer suicide. This could indicate that mental health is effected by the economic opportunities of the individuals living there. But also that more developed nations with better healthcaresystems might prevent suicides. These are not strong conlusions. But might be interesting points for further investigation with higher quality data.")
+    st.divider
 
  
 
