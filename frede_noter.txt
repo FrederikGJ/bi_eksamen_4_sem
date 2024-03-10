@@ -1,4 +1,12 @@
-Beskriv de skridt derer i PCA - 
+Opgaven -
+data sources
+reliability in data - lacking quality for most regions
+confounders and not being able to make causal inference based on the data 
+
+add latex equations to pca part 
+____________________
+
+Beskriv de skridt der er i PCA - 
 vis et pca plot for pc 1 - som et eksempel 
 vælg de pc der forklarer mest varians 
 
