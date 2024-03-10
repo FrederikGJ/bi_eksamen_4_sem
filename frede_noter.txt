@@ -3,7 +3,7 @@ data sources
 reliability in data - lacking quality for most regions
 confounders and not being able to make causal inference based on the data 
 
-add latex equations to pca part 
+add latex equations to pca part ??? maybe not actually - maybe just SSD along the pc -> for eigenvalue 
 ____________________
 
 Beskriv de skridt der er i PCA - 
