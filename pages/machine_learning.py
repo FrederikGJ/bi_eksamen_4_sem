@@ -16,7 +16,7 @@ def show():
     merge_json_to_txt(data_folder)
     display_merged_data(merged_file_path)
 
-    ### st.subheader("Data Preprocessing - now we need to clean and vectorize the data and use lang model on it - or maybe sentiment analysis")
+###  Data Preprocessing - now we need to clean and vectorize the data  - maybe sentiment analysis
 
 def merge_json_to_txt(data_folder):
     txt_file_path = os.path.join(data_folder, "merged_data.txt")
