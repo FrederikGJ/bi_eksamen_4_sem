@@ -17,6 +17,8 @@ def show():
     display_merged_data(merged_file_path)
 
 ###  Data Preprocessing - now we need to clean and vectorize the data  - maybe sentiment analysis
+    
+#### add the definition of vector from the linear algebra for non mathematicians book 
 
 def merge_json_to_txt(data_folder):
     txt_file_path = os.path.join(data_folder, "merged_data.txt")
