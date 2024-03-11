@@ -6,6 +6,8 @@ import json
 def show():
     st.title("Machine Learning")
 
+    st.write("In this section we will use machine learning to analyze qualitative data. The data is a collection of suicide notes. This can give us a better understanding of the subjective mental state of people comitting suicide.")
+
     # Define the data folder and the path to the merged file
     data_folder = "data/collection_sui_notes"
     merged_file_path = os.path.join(data_folder, "merged_data.txt")
@@ -14,7 +16,7 @@ def show():
     merge_json_to_txt(data_folder)
     display_merged_data(merged_file_path)
 
-    st.subheader("Data Preprocessing - now we need to clean and vectorize the data and use lang model on it - or maybe sentiment analysis")
+    ### st.subheader("Data Preprocessing - now we need to clean and vectorize the data and use lang model on it - or maybe sentiment analysis")
 
 def merge_json_to_txt(data_folder):
     txt_file_path = os.path.join(data_folder, "merged_data.txt")
