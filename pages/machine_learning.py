@@ -1,10 +1,11 @@
 import streamlit as st
-import pandas as pd
+from wordcloud import WordCloud
 import os
 import json
 import spacy
 from spacytextblob.spacytextblob import SpacyTextBlob
 import json
+import matplotlib.pyplot as plt
 
 def show():
     st.title("Machine Learning")
@@ -152,3 +153,31 @@ def process_and_merge_data(input_file_path):
         merged_file.write(file1.read() + file2.read())
 
     return merged_file_path
+
+def sentiment_analysis(merged_file_path):
+    nlp = spacy.load('en_core_web_sm')
+    nlp.add_pipe('spacytextblob')
+
+    with open(merged_file_path, 'r') as file:
+        text = file.read()
+
+    doc = nlp(text)
+    sentiment = doc._.blob.polarity
+
+    # Textual sentiment analysis result
+    st.write("Sentiment Analysis Result:")
+    st.write(f"Polarity (from -1 to 1, where -1 is negative and 1 is positive): {sentiment}")
+
+    st.divider()
+
+    # Word Cloud of text input
+    generate_wordcloud(text)
+
+    st.divider()
+
+def generate_wordcloud(text):
+    wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.imshow(wordcloud, interpolation='bilinear')
+    ax.axis('off')
+    st.pyplot(fig)
