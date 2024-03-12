@@ -29,9 +29,9 @@ def show():
              The data is a collection of suicide notes. This can give us a better understanding of the 
              subjective mental state of people comitting suicide.
              """)
-    st.write("""
-            KDDDDKKDDKDKDKKDKDKDKDKDKDKDKDKKDKDKDKKDDK This will be expressed as a score DUDUDUDU
-             """)
+    st.divider()
+
+    st.subheader("Displaying the qalitative data in raw text foramt")
     # Define the data folder and the path to the merged file
     data_folder = "data/collection_sui_notes"
     merged_file_path = os.path.join(data_folder, "merged_data.txt")
@@ -39,17 +39,29 @@ def show():
     # Merge JSON files to a text file and display the merged data
     merge_json_to_txt(data_folder)
     display_merged_data(merged_file_path)
+
+    display_merged_data(process_and_merge_data(merged_file_path))
+
+    st.divider()
+
+    st.subheader("Sentiment analysis")
     
-    sentiment_analysis(combined_letters())
+    sentiment_analysis(process_and_merge_data(merged_file_path))
 
     st.write("""
-            The polarity score is sligtly negative. This is expected beacuse the
+            The polarity score is sligtly positive. This is not expected beacuse the
              letters we analyze are suicide letters.
 
              Given the relatively small sample size (16) of letters we won't be making nay strong 
-             conlusions. But it could be interesting to understand why the polarity score isn't more negative.
+             conlusions. But it could be interesting to understand why the polarity score isn't negative.
+
              One palusible explanation is that suicide letters are very domain specific
-             and the model is not trained specifically for that. 
+             and the model is not trained specifically for that. Another plausible explanation is that
+             the people writing the letters are feeling relief beacuase they have wanted to commit suicide 
+             is feeling relief. 
+
+             Further investigation could be interesting. Maybe a model trained with Reinforcement Leaning (RF) 
+             made in colalboration with mental health professionals would give a more realistc score. 
             """)
 
 ###  Data Preprocessing - now we need to clean and vectorize the data  - maybe sentiment analysis
@@ -73,7 +85,7 @@ def merge_json_to_txt(data_folder):
 def display_merged_data(merged_file_path):
     with open(merged_file_path, 'r') as file:
         merged_data = file.read()
-        st.text_area("Merged Data - in raw txt format", merged_data, height=100)
+        st.text_area("Merged Data - in raw txt format", merged_data, height=200)
 
 
 def sentiment_analysis(merged_file_path):
@@ -92,38 +104,50 @@ def sentiment_analysis(merged_file_path):
     st.write("Sentiment Analysis Result:")
     st.write(f"Polarity (from -1 to 1, where -1 is negative and 1 is positive): {sentiment}")
 
-def combined_letters():
-    
+
+def process_and_merge_data(input_file_path):
     # Load and parse the data from the file
-    with open('data/collection_sui_notes/merged_data.txt', 'r', encoding='utf-8') as file:
+    with open(input_file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
-    # Each record is separated by a newline and starts with '{', so we need to join them correctly
     data = []
     record = ''
     for line in lines:
         if line.startswith('{') and record:
-            # Parse the current record and add it to the list
             data.append(json.loads(record))
-            record = line  # Start a new record
+            record = line
         else:
-            record += line  # Continue building the current record
+            record += line
     if record:
-        data.append(json.loads(record))  # Add the last record
+        data.append(json.loads(record))
 
     # Filter English notes and translations
-    notes_with_translations = []
+    english_notes = []
+    translations = []
     for item in data:
         if 'suicideNote' in item and ('en' in item.get('lang', '') or 'English' in item.get('biography', '')):
-            note = item['suicideNote']
-            translation = item.get('translation', 'No translation available')
-            notes_with_translations.append(f"English Note: {note}\nTranslation: {translation}\n")
+            english_notes.append(item['suicideNote'])
+        if 'translation' in item:
+            translations.append(item['translation'])
 
-    # Save to a single file
-    combined_file = 'data/collection_sui_notes/combined_notes.txt'
-    with open(combined_file, 'w', encoding='utf-8') as file:
-        for entry in notes_with_translations:
-            file.write(entry + "\n")
+    # Save to new files and then merge
+            
+    english_notes_file = 'data/collection_sui_notes/english_notes.txt'
+    translations_file = 'data/collection_sui_notes/translations.txt'
+    merged_file_path = 'data/collection_sui_notes/merged_data_final.txt'
 
+    with open(english_notes_file, 'w', encoding='utf-8') as file:
+        for note in english_notes:
+            file.write(note + "\n")
 
-    return combined_file
+    with open(translations_file, 'w', encoding='utf-8') as file:
+        for translation in translations:
+            file.write(translation + "\n")
+
+    # Merge the two files
+    with open(english_notes_file, 'r', encoding='utf-8') as file1, \
+         open(translations_file, 'r', encoding='utf-8') as file2, \
+         open(merged_file_path, 'w', encoding='utf-8') as merged_file:
+        merged_file.write(file1.read() + file2.read())
+
+    return merged_file_path
