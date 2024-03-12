@@ -15,8 +15,16 @@ def show():
 
 
     st.subheader("Introduction to our project")
-    ## Tilføj intro
+    ## Add introduction
+    # the questions 
+    # the data - sources
+    # data quality - realiability - eurostat principles
+    # causal inference (confounders)
+    # Forklaring af datakvalitetsudfordringer
 
+    #st.markdown("### Confounders: ")
+    #st.write("In the data we are using from WHO, there are serious confounders. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with things like the CPR number, centralised source taxation, and so on. These measures ensure accurate data tracking of every single individual and company in the country.")
+    #################
 
     # Indlæs data
     data = pd.read_csv('data/csv/SDGSUICIDE.csv')
@@ -76,8 +84,6 @@ def show():
     
     st.divider()
 
-    # Forklaring af datakvalitetsudfordringer
-    st.markdown("### Confounders: ")
-    st.write("In the data we are using from WHO, there are serious confounders. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with things like the CPR number, centralised source taxation, and so on. These measures ensure accurate data tracking of every single individual and company in the country.")
+
 
     
