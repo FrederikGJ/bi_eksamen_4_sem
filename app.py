@@ -21,5 +21,10 @@ def main():
     # Vis den valgte side
     pages[page]()
 
+    # load data og gem det på sessionstate 
+   # if 'cleaned_data ' not in st.session_state:
+   #     st.session_state.cleaned_data = {}   
+
+
 if __name__ == "__main__":
     main()
