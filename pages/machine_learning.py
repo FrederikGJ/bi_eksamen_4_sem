@@ -9,10 +9,29 @@ import json
 def show():
     st.title("Machine Learning")
 
-    st.header("WHAT IS MACHINE LEARNING")
+    st.write("""
+             First we have a definition of machine learning. Then we will apply machine learning. 
+             More speifically we will apply a NLP model to analyze qualitative data and give a quantitative score
+             to the subjective mental state of people committing suicide.
+             """)
 
-    st.write("In this section we will use machine learning to analyze qualitative data. The data is a collection of suicide notes. This can give us a better understanding of the subjective mental state of people comitting suicide.")
+    st.markdown("""
+                ### Machine Learning: A Definition
 
+                Machine learning (ML) is a subfield of artificial intelligence (AI) that focuses on enabling 
+                computers to learn and make predictions or decisions without being explicitly programmed.
+                 Instead of writing extensive code with rules for every possible scenario, 
+                machine learning algorithms use data to identify patterns and build models that perform tasks autonomously.
+                """)
+
+    st.write("""
+             In this section we will use machine learning to analyze qualitative data. 
+             The data is a collection of suicide notes. This can give us a better understanding of the 
+             subjective mental state of people comitting suicide.
+             """)
+    st.write("""
+            The suicide 
+             """)
     # Define the data folder and the path to the merged file
     data_folder = "data/collection_sui_notes"
     merged_file_path = os.path.join(data_folder, "merged_data.txt")
