@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 def show():
     st.title("Machine Learning")
 
+    st.title("#### add the definition of vector from the linear algebra for non mathematicians book and explain the NLP process")
+
     st.write("""
              First we have a definition of machine learning. Then we will apply machine learning. 
              More speifically we will apply a NLP model to analyze qualitative data and give a 
@@ -66,9 +68,6 @@ def show():
              made in colalboration with mental health professionals would give a more realistc score. 
             """)
 
-###  Data Preprocessing - now we need to clean and vectorize the data  - maybe sentiment analysis
-    
-#### add the definition of vector from the linear algebra for non mathematicians book 
 
 def merge_json_to_txt(data_folder):
     txt_file_path = os.path.join(data_folder, "merged_data.txt")
