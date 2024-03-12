@@ -1,6 +1,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.cluster import KMeans
+
 
 def show():
     # App titel
@@ -24,10 +26,12 @@ def show():
     st.write(cleaned_data3)
 
 
+    st.divider()
 
     # Deskriptiv statistik
     st.subheader("Descriptive data on the suicide rates in the cleaned data set")
-    st.write("Calculations of the estimated mean and standard deviation for Tabel 1. ")
+    
+    st.write("The equation below display calculations of the estimated mean and standard deviation for Tabel 1. ")
     
     # Tabel 1
     desc_stats = cleaned_data['Numeric'].describe()    
@@ -65,16 +69,21 @@ def show():
     st.latex(rf'''
     \text{{Estimated Standard Deviation = }} s = \sqrt{{\frac{{1}}{{n-1}}\sum_{{i=1}}^{{n}}(x_i - \bar{{x}})^2}} = \sqrt{{\frac{{1}}{{{n}-1}} \cdot {sum_x_minus_mean_squared.round(2)}}} = {std_dev.round(2)}
     ''')
-    st.write("Tabel 1: Suicide data from 2019")
+
+    st.subheader("Tabel 1: Suicide data from 2019") 
+    st.markdown("This plot illustrates the statistical summary of suicide rates in 2019, adjusted to reflect the number of reported suicides per 100,000 population. ")
     st.write(cleaned_data['Numeric'].describe())
 
-    st.write("Tabel 2: Suicide data from 1987 - 2016")
+    st.subheader("Tabel 2: Suicide data from 1987 - 2016")
+    st.markdown("This plot illustrates the statistical summary of suicide rates in a 20 year time period, adjusted to reflect the number of reported suicides per 100,000 population.")
     st.write(cleaned_data1['suicides/100k pop'].describe())
 
-    st.write("Tabel 3: Mental health facilities data from 2016")
+    st.subheader("Tabel 3: Mental health facilities data from 2016")
+    st.markdown("This plot illustrates the statistical summary of the number of mental health units in 2016, adjusted to reflect the number  of Mental health units in general hospitals per 100,000 population")
     st.write(cleaned_data2['Mental health units in general hospitals (per 100 000 population)'].describe())
 
-    st.write("Tabel 4: Human ressources data from 2016")
+    st.subheader("Tabel 4: Human ressources data from 2016")
+    st.markdown("This plot illustrates the statistical summary of the number of human ressources in 2016, adjusted to reflect the number of psychiatrists working in mental health sector per 100 000 population")
     st.write(cleaned_data3['Psychiatrists working in mental health sector (per 100 000 population)'].describe())
    
     st.divider()
@@ -88,7 +97,11 @@ def show():
     plt.ylabel('Suicide Rate per 100,000')
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
+    
     st.pyplot(plt)
+
+    st.divider()
+
 
     #Tabel 2
     plt.figure(figsize=(10, 6))
@@ -99,10 +112,11 @@ def show():
     plt.xticks(rotation=45, ha="right")
     st.pyplot(plt)
 
+    st.divider()
+
    # For Tabel 3 - Histogram for Mental health facilities data
     plt.figure(figsize=(10, 6))
-    
-    plt.barh(cleaned_data2['Countries, territories and areas'], cleaned_data2['Mental health units in general hospitals (per 100 000 population)'], color='blue')
+    plt.barh(cleaned_data2['Countries, territories and areas'], cleaned_data2['Mental health units in general hospitals (per 100 000 population)'], color='#0C7BE5')
     plt.title('Histogram of Mental health units in general hospitals per 100,000 in 2016')
     plt.xlabel('Mental health units in general hospitals (per 100 000 population)')
     plt.ylabel('Countries, territories and areas')
@@ -110,14 +124,31 @@ def show():
     plt.tight_layout()
     st.pyplot(plt)
 
-# For Tabel 4 - Histogram for Human resources data
-    plt.figure(figsize=(10, 6))
-    plt.hist(cleaned_data3['Psychiatrists working in mental health sector (per 100 000 population)'], color='blue', bins=20)  # Tilpasser antallet af bins efter behov
-    plt.title('Histogram of Psychiatrists working in mental health sector per 100,000 in 2016')
-    plt.xlabel('Psychiatrists working in mental health sector (per 100 000 population)')
-    plt.ylabel('Frequency')
-    plt.tight_layout()
-    st.pyplot(plt)
+    st.divider()
+
+    # Tabel 4 - Histogram for Human resources data
+    fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(12, 10))
+    sns.histplot(cleaned_data3['Psychiatrists working in mental health sector (per 100 000 population)'], ax=axes[0, 0])
+    axes[0, 0].set_title('Psychiatrists (per 100k)')
+    sns.histplot(cleaned_data3['Nurses working in mental health sector (per 100 000 population)'], ax=axes[0, 1])
+    axes[0, 1].set_title('Nurses (per 100k)')
+    sns.histplot(cleaned_data3['Social workers working in mental health sector (per 100 000 population)'], ax=axes[1, 0])
+    axes[1, 0].set_title('Social Workers (per 100k)')
+    sns.histplot(cleaned_data3['Psychologists working in mental health sector (per 100 000 population)'], ax=axes[1, 1])
+    axes[1, 1].set_title('Psychologists (per 100k)')
+    st.pyplot(fig)
+
+    st.divider()
+     
+
+    # K-means clustering
+    
+
+
+
+
+    
+
 
     
 
