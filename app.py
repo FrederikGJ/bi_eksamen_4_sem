@@ -1,7 +1,7 @@
 import streamlit as st
 from pages import descriptive_stats, introduction, pca, regression, machine_learning  # Importer siderne
 
-# lolo frederiks branch
+
 
 # Funktioner for hver side
 pages = {
@@ -19,11 +19,9 @@ def main():
     page = st.sidebar.radio("Go to", list(pages.keys()))
 
     # Vis den valgte side
-    pages[page]()
+    pages[page]()  
 
-    # load data og gem det på sessionstate 
-   # if 'cleaned_data ' not in st.session_state:
-   #     st.session_state.cleaned_data = {}   
+
 
 
 if __name__ == "__main__":
