@@ -16,3 +16,6 @@ https://apps.who.int/gho/data/node.main.MHFAC?lang=en
 selvmordsrate for “yngre” og “mindre yngre” https://apps.who.int/gho/data/node.main.MHSUICIDEAGEGROUPS15293049?lang=en 
 
 suicide rate https://www.kaggle.com/datasets/russellyates88/suicide-rates-overview-1985-to-2016?select=master.csv
+
+Suicide notes were found at:
+https://github.com/CodeWritingCow/suicide-notes/tree/master/collection
