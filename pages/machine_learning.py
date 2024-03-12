@@ -30,7 +30,7 @@ def show():
              subjective mental state of people comitting suicide.
              """)
     st.write("""
-            The suicide 
+            KDDDDKKDDKDKDKKDKDKDKDKDKDKDKDKKDKDKDKKDDK This will be expressed as a score DUDUDUDU
              """)
     # Define the data folder and the path to the merged file
     data_folder = "data/collection_sui_notes"
@@ -39,10 +39,14 @@ def show():
     # Merge JSON files to a text file and display the merged data
     merge_json_to_txt(data_folder)
     display_merged_data(merged_file_path)
-
-    st.header("WRITE SOME SHIT ABOUT THE SENTMENT ANALYSIS ")
-
+    
     sentiment_analysis(combined_letters())
+
+    st.write("""
+            The polarity score is sligtly negative. This is expected beacuse the
+             letters we analyze are suicide letters.
+             Given the relatively small sample size (16) of letters.
+            """)
 
 ###  Data Preprocessing - now we need to clean and vectorize the data  - maybe sentiment analysis
     
