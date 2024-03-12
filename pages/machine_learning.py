@@ -11,7 +11,8 @@ def show():
 
     st.write("""
              First we have a definition of machine learning. Then we will apply machine learning. 
-             More speifically we will apply a NLP model to analyze qualitative data and give a quantitative score
+             More speifically we will apply a NLP model to analyze qualitative data and give a 
+             quantitative score
              to the subjective mental state of people committing suicide.
              """)
 
