@@ -45,7 +45,11 @@ def show():
     st.write("""
             The polarity score is sligtly negative. This is expected beacuse the
              letters we analyze are suicide letters.
-             Given the relatively small sample size (16) of letters.
+
+             Given the relatively small sample size (16) of letters we won't be making nay strong 
+             conlusions. But it could be interesting to understand why the polarity score isn't more negative.
+             One palusible explanation is that suicide letters are very domain specific
+             and the model is not trained specifically for that. 
             """)
 
 ###  Data Preprocessing - now we need to clean and vectorize the data  - maybe sentiment analysis
