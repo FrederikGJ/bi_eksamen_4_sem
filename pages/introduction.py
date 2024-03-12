@@ -16,10 +16,10 @@ def show():
 
     st.subheader("Introduction to our project")
     ## Add introduction
-    # the questions 
+    # the questions - the macro and the micro perspective - quantitative and qualitative data
     # the data - sources
     # data quality - realiability - eurostat principles
-    # causal inference (confounders)
+    # causal inference (confounders) - RCT needed for real causal inference
     # Forklaring af datakvalitetsudfordringer
 
     #st.markdown("### Confounders: ")
