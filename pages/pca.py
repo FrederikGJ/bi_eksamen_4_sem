@@ -61,6 +61,7 @@ def show():
     st.latex(r"Eigenvalue\ =\ Sum\ of\ Squared\ Distances\ along\ a\ Principal\ Component")
     st.latex(r"Sum\ of\ Squared\ Distances\ = \sum_{i=1}^{n} d_i^2")
     st.latex(r"Variance = \frac{\sum_{i=1}^{n} d_i^2}{n-1}")
+    st.latex(r"Where\ n\ is\ the\ number\ of\ datapoints\ in\ the\ dataset")
 
     
     # Make new dataframe that has the first 4 principal components
