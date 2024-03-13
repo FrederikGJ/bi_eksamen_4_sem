@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def show():
-    st.title("Mental health and suicide rates in the world")
+    st.title("Mental health and suicide in the world")
 
     st.subheader("Group:")
 
