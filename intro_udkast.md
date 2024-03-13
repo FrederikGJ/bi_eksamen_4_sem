@@ -8,7 +8,7 @@ You often read news about the mental health crisis among young people all over t
 Some goes as far as calling it a mental health pandemic. In our project we want to investigate this,
 by looking at quantitative data from the WHO (World Health Organisation) and qualitative data from
 a collection of suicide notes.
-We use suicide rates as a proxy for the mental health state of peoples across the globe. And the suicide notes to investigate the subjective mental state of someone who is severely depressed. So we look at the problem of mental health problems from both a macro and micro persepektive. Both the global and the local perspective.
+We use suicide rates as a proxy for state of peoples mental health across the globe, along with suicide notes to investigate the subjective mental state of someone who is severely depressed. So we look at the problem of mental health from both a macro and micro persepektive. Both the global and the local perspective.
 
 The question we seek to answer: what are the soci-economic and personal causes of mental health problems?
 
@@ -25,9 +25,9 @@ We were able to download the data in a csv format, making it easily available fo
 
 In the data we are using from WHO, there are serious errors. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with and data on things like the CPR number, centralised statitics agency, centralized source taxation and so on. These measures ensure accurate data gathering of every single individual and company in the country. Unfortunately the opposite is the case on a global scale. Data on populations of great quality is scarcely available.
 
-Antoher road block for students not affiliated with a hospital is the access to the data. The data is not available for download for the general public. This is among other things because of the european GDPR regulation. So even though there are data of great quality og health data in Denmark (and other Scandinavian countries), it is not available for the general public.
+Antoher road block for students not affiliated with a hospital is the access to the data. The data is not available for download for the general public. This is, among other things because of the european GDPR regulation. So even though there are data of great quality og health data in Denmark (and other Scandinavian countries), it is not available for the general public.
 
-In the EU efforts are made through Eurostat, to enhance data quality acorss the European Union. But this takes a lot of work and economic reasources. Projects of this magnitude are not possible for all nations across the globe. Because of the econimic burden associated with it.
+In the EU efforts are made through Eurostat, to enhance data quality across the European Union. But this takes a lot of work and economic reasources. Projects of this magnitude are not possible for all nations across the globe. Because of the econimic burden associated with it.
 
 But if it would ever be possible an implementation of something like European Statistics Code of Practice on a global level would enable data scientists all over the world, to do productive reaseach for the benefit of mankind. 
 
