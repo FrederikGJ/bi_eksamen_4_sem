@@ -120,9 +120,7 @@ def show():
     st.divider()
 
    # For Tabel 3 - Histogram for Mental health facilities data
-    st.write("Here we can se that the number of mental health units per 100,000 population varies greatly between countries. Some countries, such as Zimbabwe and Slovenia, have over 600 mental health units per 100,000 population, while others, such as India and Ghana, have fewer than 100.")
-    st.write("The most common number of mental health units per 100,000 population falls between 200 and 300.")
-    st.write("The data is skewed to the right, meaning that there are more countries with a higher number of mental health units per 100,000 population than there are countries with a lower number.")
+    st.write("Here we can se that the number of mental health units per 100,000 population varies greatly between countries. Some countries, such as Ireland and Estonia, have over 600 mental health units per 100,000 population, while others, such as Mexico and Ghana, have fewer than 100.")
     plt.figure(figsize=(10, 6))
     plt.barh(cleaned_data2['Countries, territories and areas'], cleaned_data2['Mental health units in general hospitals (per 100 000 population)'], color='#0C7BE5')
     plt.title('Histogram of Mental health units in general hospitals per 100,000 in 2016')
@@ -135,9 +133,7 @@ def show():
     st.divider()
 
     # Tabel 4 - Histogram for Human resources data
-    st.write("The graph likely shows how many countries (or regions) have a certain number of psychiatrists. For example, there might be a tall bar above the x-axis value of 10, indicating that many countries have around 10 psychiatrists.")
-    st.write("Tallest bar above the number 15 on the x-axis: This means the most common scenario is for a country to have approximately 15 psychiatrists")
-
+    st.write("The graphs show that the number of mental health employees per 100,000 population is pretty low in most countries. However, there are a few countries with a much higher number of mental health employees.")
     fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(12, 10))
     sns.histplot(cleaned_data3['Psychiatrists working in mental health sector (per 100 000 population)'], ax=axes[0, 0])
     axes[0, 0].set_title('Psychiatrists (per 100k)')
