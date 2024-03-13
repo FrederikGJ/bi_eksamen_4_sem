@@ -10,7 +10,10 @@ import matplotlib.pyplot as plt
 def show():
     st.title("Machine Learning")
 
+#############################################################################################################################################
     st.title("#### add the definition of vector from the linear algebra for non mathematicians book and explain the NLP process")
+#############################################################################################################################################
+
 
     st.write("""
              First we have a definition of machine learning. Then we will apply machine learning. 
