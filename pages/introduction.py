@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+
 def show():
     st.title("Mental health and suicide rates in the world")
 
@@ -15,7 +16,7 @@ def show():
 
 
     st.subheader("Introduction to our project")
-    ## Tilføj intro
+    st.write("**MANGLER AT SKRIVE EN INTRO**")
 
 
     # Indlæs data
