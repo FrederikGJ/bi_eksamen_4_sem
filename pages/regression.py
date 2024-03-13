@@ -18,7 +18,7 @@ def load_data():
 
     st.subheader("Data cleaning and preprocessing")
 
-    df = pd.read_csv('data\csv\suicide2019_cleaned.csv')
+    df = pd.read_csv('data/csv/suicide2019_cleaned.csv')
 
     st.write("The data has already been cleaned a bit. We have removed some columns like the generation and country-year columns, because we dont need them for the regression part of the analysis. We have also removed the HDI for year column because it had too many missing values. Some of the columns have been converted to a numeric type, so we can use them in our analysis. The column 'sex' and 'age' have been converted to a numeric type.")
     st.write("First 10 rows of the dataset:")
