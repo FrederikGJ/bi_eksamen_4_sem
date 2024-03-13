@@ -2,14 +2,11 @@
 
 ### Mental health and suicide - global and personal perspectives
 
-    
-    # the questions - the macro and the micro perspective - quantitative and qualitative data
-
-    You often read news about the mental health crisis among young people all over the world. 
-    Some goes as far as calling it a mental health pandemic. In our project we want to investigate this,
-    by looking at quantitative data from the WHO (World Health Organisation) and qualitative data from
-    a collection of suicide notes.
-    We use suicide rates as a proxy for the mental health state of peoples across the globe. And the suicide notes to investigate the subjective mental state of someone who is severely depressed. So we look at the problem of mental health problems from both a macro and micro persepektive. Both the global and the local perspective. 
+You often read news about the mental health crisis among young people all over the world. 
+Some goes as far as calling it a mental health pandemic. In our project we want to investigate this,
+by looking at quantitative data from the WHO (World Health Organisation) and qualitative data from
+a collection of suicide notes.
+We use suicide rates as a proxy for the mental health state of peoples across the globe. And the suicide notes to investigate the subjective mental state of someone who is severely depressed. So we look at the problem of mental health problems from both a macro and micro persepektive. Both the global and the local perspective. 
 
     The question we seek to answer: what are the soci-economic and personal causes of mental health problems? 
 
