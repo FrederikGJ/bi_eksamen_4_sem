@@ -50,8 +50,6 @@ But if it would ever be possible an implementation of something like European St
 - **Coherence and Comparability**: Ensuring statistics are internally consistent and comparable across regions and countries.
 - **Accessibility and Clarity**: Clear and understandable presentation of European statistics, with accessible supporting metadata and guidance.
 
-
-
 _European Statistical System Committee, 2017. European Statistics Code of Practice for the National Statistical Authorities and Eurostat (EU statistical authority). Adopted 16 November 2017. [online] Available at: [[URL](https://ec.europa.eu/eurostat/web/products-catalogues/-/ks-02-18-142)] [12/03/2024]._
 
 ### Causal Inference based on the data
