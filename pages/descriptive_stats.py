@@ -19,7 +19,7 @@ def show():
     cleaned_data1 = st.session_state.cleaned_data1
     cleaned_data2 = st.session_state.cleaned_data2
     cleaned_data3 = st.session_state.cleaned_data3
-   
+
 
 
 
