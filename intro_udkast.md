@@ -12,12 +12,17 @@ We use suicide rates as a proxy for the mental health state of peoples across th
 The question we seek to answer: what are the soci-economic and personal causes of mental health problems? 
 
 ### Data sources
-    sdfasdfasdfas
+We have found our quantitiative data at the WHO website. The qualitative data, the collection of suicide letters, were found in a github repository. 
+
+Links for the data is found in our repository in the data directory in the file Links.md
 
 ### The data
     # data quality  
+
     - eurostat principle
+    
     - Forklaring af datakvalitetsudfordringer
+    
     #st.markdown("### Confounders: ")
     #st.write("In the data we are using from WHO, there are serious confounders. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with things like the CPR number, centralised source taxation, and so on. These measures ensure accurate data tracking of every single individual and company in the country.")
 
