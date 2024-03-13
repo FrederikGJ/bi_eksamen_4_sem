@@ -45,9 +45,23 @@ def show():
 
     # Merge JSON files to a text file and display the merged data
     merge_json_to_txt(data_folder)
+    ####################################################
+    # her skriver jeg at man kan læse json filerne i vores github 
+    # repo med de tegn der er på de oriinale sprog
+    ############################################
     display_merged_data(merged_file_path)
-
+    ####################################################
+    # her beskriver jeg hilken data jeg vælger
+    ############################################
     display_merged_data(process_and_merge_data(merged_file_path))
+
+    st.divider()
+
+    st.subheader("Natural Language Processing")
+    st.write("""NLP (Natural Language Processing) is a field within artificial intelligence 
+             that focuses on enabling computers to understand, interpret, and generate human language.
+              It combines techniques from computer science and linguistics to bridge the gap between human
+              communication and computer processing.""")
 
     st.divider()
 
