@@ -25,7 +25,9 @@ We were able to download the data in a csv format, making it easily available fo
 
 In the data we are using from WHO, there are serious errors. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with and data on things like the CPR number, centralised statitics agency, centralized source taxation and so on. These measures ensure accurate data gathering of every single individual and company in the country. Unfortunately the opposite is the case on a global scale. Data on populations of great quality is scarcely available. 
 
-Antoher road block for students not affiliated with a hospital is the access to the data. The data is not available for download for the general public. This is among other things because of the european GDPR regulation. So even though there are data of great quality in Denmark, it is not available for the general public.
+Antoher road block for students not affiliated with a hospital is the access to the data. The data is not available for download for the general public. This is among other things because of the european GDPR regulation. So even though there are data of great quality og health data in Denmark (and other Scandinavian countries), it is not available for the general public.
+
+In the EU efforts are made through Eurostat, to enhance data quality acorss the 
 
 *European Statistical System Committee, 2017. European Statistics Code of Practice for the National Statistical Authorities and Eurostat (EU statistical authority). Adopted 16 November 2017. [online] Available at: [[URL](https://ec.europa.eu/eurostat/web/products-catalogues/-/ks-02-18-142)] [12/03/2024].*
 
