@@ -17,14 +17,15 @@ We have found our quantitiative data at the WHO website. The qualitative data, t
 Links for the data is found in our repository in the data directory in the file Links.md
 
 ### The data
-    # data quality  
+The data we have is epidemological and economic data from countries all over the world. 
+We were able to download the data in a csv format, making it easily available for data manipulation with the Python programming language and its many libraries.
 
     - eurostat principle
     
     - Forklaring af datakvalitetsudfordringer
     
     #st.markdown("### Confounders: ")
-    #st.write("In the data we are using from WHO, there are serious confounders. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with things like the CPR number, centralised source taxation, and so on. These measures ensure accurate data tracking of every single individual and company in the country.")
+    #st.write("In the data we are using from WHO, there are serious errors. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with and data on things like the CPR number, centralised source taxation, and so on. These measures ensure accurate data tracking of every single individual and company in the country.")
 
 ### An epistemological persepctive
     # - realiability in the project - an epistemological view 
@@ -33,6 +34,8 @@ Links for the data is found in our repository in the data directory in the file 
     # causal inference (confounders) - RCT needed for someitng approximating a cirtain causal inference
   
 ### Structure of the project
+
+Our project is structured in the following manner. 
 
 1. Introduction and Cleaned Data Preview
 2. Descriptive statistics
