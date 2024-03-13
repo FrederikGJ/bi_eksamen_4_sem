@@ -40,14 +40,9 @@ def show():
 
     # Merge JSON files to a text file and display the merged data
     merge_json_to_txt(data_folder)
-    ####################################################
-    # her skriver jeg at man kan læse json filerne i vores github 
-    # repo med de tegn der er på de oriinale sprog
-    ############################################
+    st.write("The original json files are available in our GitHub repository.")
     display_merged_data(merged_file_path)
-    ####################################################
-    # her beskriver jeg hvilken data jeg vælger
-    ############################################
+    st.write("We chose to get the suicide letters from the text file for our sentiment analysis.")
     display_merged_data(process_and_merge_data(merged_file_path))
 
     st.divider()
