@@ -2,8 +2,11 @@
 
 ### Mental health and suicide - global and personal perspectives
 
-    ## Add introduction
+    
     # the questions - the macro and the micro perspective - quantitative and qualitative data
+    You often read news about the mental health crisis among young people all over the world. 
+    Some goes as far as calling it a mental health pandemic. In our project we want to investigate this,
+    by looking at data from the WHO (World Health Organisation)
     # data quality  - eurostat principle
     # the data - sources --  Forklaring af datakvalitetsudfordringer
     # - realiability in the project - an epistemological view 
