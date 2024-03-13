@@ -10,11 +10,6 @@ import matplotlib.pyplot as plt
 def show():
     st.title("Machine Learning")
 
-#############################################################################################################################################
-    st.title("#### add the definition of vector from the linear algebra for non mathematicians book and explain the NLP process")
-#############################################################################################################################################
-
-
     st.write("""
              First we have a definition of machine learning. Then we will apply machine learning. 
              More speifically we will apply a NLP model to analyze qualitative data and give a 
@@ -62,6 +57,10 @@ def show():
              that focuses on enabling computers to understand, interpret, and generate human language.
               It combines techniques from computer science and linguistics to bridge the gap between human
               communication and computer processing.""")
+    
+    #############################################################################################################################################
+    st.title("#### add the definition of vector from the linear algebra for non mathematicians book and explain the NLP process")
+#############################################################################################################################################
 
     st.divider()
 
