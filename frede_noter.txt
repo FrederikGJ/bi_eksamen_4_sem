@@ -9,11 +9,9 @@ ____________________
 
 noter om datakvalitet 
 vi kan sammenligne det data vi bruger op mod de 16 principper for statistik fra eurostat
-
 ____________________
 
 konklusion - sammenhænge, svagheder, metoder, datakvalitet, confounders, resourcer ift scope osv osv osv....
-
 _______________________
 
 :::::
