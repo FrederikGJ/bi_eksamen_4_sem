@@ -34,6 +34,7 @@ But if it would ever be possible an implementation of something like European St
 **The European European Statistics Code of Practice has 16 principles, which are the following**
 
 - **Professional Independence**: Ensuring the independence of statistical authorities from political and other external interference.
+- **Coordination and Cooperation**: Coordination and active cooperation within the European Statistical System to ensure the development, production, and dissemination of European statistics.
 - **Mandate for Data Collection and Access to Data**: Clear legal mandate for statistical authorities to collect and access data for European statistical purposes.
 - **Adequacy of Resources**: Sufficient resources to meet European statistics requirements.
 - **Commitment to Quality**: Continuous improvement of process and output quality by statistical authorities.
@@ -48,7 +49,7 @@ But if it would ever be possible an implementation of something like European St
 - **Timeliness and Punctuality**: Timely and punctual release of European statistics.
 - **Coherence and Comparability**: Ensuring statistics are internally consistent and comparable across regions and countries.
 - **Accessibility and Clarity**: Clear and understandable presentation of European statistics, with accessible supporting metadata and guidance.
-- **Coordination and Cooperation**: Coordination and active cooperation within the European Statistical System to ensure the development, production, and dissemination of European statistics.
+
 
 
 _European Statistical System Committee, 2017. European Statistics Code of Practice for the National Statistical Authorities and Eurostat (EU statistical authority). Adopted 16 November 2017. [online] Available at: [[URL](https://ec.europa.eu/eurostat/web/products-catalogues/-/ks-02-18-142)] [12/03/2024]._
