@@ -60,7 +60,7 @@ def load_data():
     # Display correlation matrix
     st.subheader("Correlation Matrix")
     st.write("We are using the correlation matrix to display the correlation coefficients between the different variables. A lot of the variables are close to 0 which means that there are no correlation or a weak correlation between them. Some of the variables - like suicides_no and GPD pr year - have a correlation closer to 1 which means that there is a stronger positive correlation.")
-    st.write("We will use the correlation matrix to determine which variabels have a linear relationship and if there are any we can possibly use for a linear regression")
+
     correlation_matrix = df_numeric.corr()
     sns.heatmap(correlation_matrix, annot=True, cmap="RdBu_r", center=0, linewidths=.5)
     plt.title("Correlation Matrix")
@@ -178,6 +178,13 @@ def load_data():
     y_pred_train = model(X_train)
     y_pred_test = model(X_test)
 
+    # Assuming your polynomial coefficients are stored in the 'model' variable
+    a, b, c, d = model.coefficients
+
+    # Our equation based on the coefficients becomes:
+    st.write("The equation for the polynomial regression model based on our data becomes: ")
+    st.latex(f"f(x) = {a:.2f}x^3 + {b:.2f}x^2 + {c:.2f}x + {d:.2f}")
+
     # Model evaluation
 
     st.subheader("Model evaluation")
@@ -236,8 +243,7 @@ def load_data():
 
     st.divider()
 
-    ########################################################################################################################################
-
+    #######################################################################################################################################
 
 def show():
     load_data()
