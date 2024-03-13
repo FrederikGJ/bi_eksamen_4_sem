@@ -51,9 +51,6 @@ def show():
         In the data we are using from WHO, there are serious errors. The data quality for different countries varies immensely. Most countries do not have data on the total population. It is only the Scandinavian countries that have valid data on the total population with and data on things like the CPR number, centralised statitics agency, centralized source taxation and so on. These measures ensure accurate data gathering of every single individual and company in the country. Unfortunately the opposite is the case on a global scale. Data on populations of great quality is scarcely available.
 
         Antoher road block for students not affiliated with a hospital is the access to the data. The data is not available for download for the general public. This is among other things because of the european GDPR regulation. So even though there are data of great quality og health data in Denmark (and other Scandinavian countries), it is not available for the general public.
-
-       
-        **The European Statistics Code of Practice** is a set of 16 principles that are designed to ensure the quality of European statistics. The principles cover areas such as *Professional Independence* and *Mandate for Data Collection and Access to Data* .
         
 
         ### Causal Inference with the current data
