@@ -53,17 +53,18 @@ python -m venv env
 .\env\Scripts\activate
 ```
 
+### thereafter you write:
+
+```bash
+streamlit run app.py
+```
+
 ### deactivate the environment:
 
 ```bash
 deactivate
 ```
 
-### thereafter you write:
-
-```bash
-streamlit run app.py
-```
 ### in your terminal - then the app runs in the browser
 
 ## pip install
