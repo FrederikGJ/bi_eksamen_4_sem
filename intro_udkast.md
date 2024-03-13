@@ -52,9 +52,20 @@ But if it would ever be possible an implementation of something like European St
 
 _European Statistical System Committee, 2017. European Statistics Code of Practice for the National Statistical Authorities and Eurostat (EU statistical authority). Adopted 16 November 2017. [online] Available at: [[URL](https://ec.europa.eu/eurostat/web/products-catalogues/-/ks-02-18-142)] [12/03/2024]._
 
-### Causal Inference based on the data
+### Causal Inference with the current data
+Causal inference in statistics relies on the ability to establish a cause-and-effect relationship between variables. However, bad data quality can severely compromise this process. Here are some key reasons why:
 
+1. Inaccurate data: If the data contains errors or inaccuracies, any analysis conducted, including causal inference, will be based on faulty information. This can lead to incorrect conclusions about the relationships between variables.
 
+2. Missing data: Gaps in the data can result in biased or incomplete analyses. Missing data can affect the estimation of parameters and lead to misleading inferences about causal relationships.
+
+3. Confounding variables: For causal inference, it's crucial to account for all relevant variables that might affect the relationship between the independent and dependent variables. Poor data quality might mean that some confounding variables are not measured or are inaccurately recorded, which can skew the results.
+
+4. Poor representativeness: If the data is not representative of the population or phenomenon being studied, the findings from the data cannot be generalized. This means that any causal relationship identified in the study may not actually exist in the larger context.
+
+5. Temporal ambiguity: Causal inference often requires clear temporal ordering between cause and effect. Poor data quality can lead to uncertainties in the timing of events, making it difficult to establish which variable is the cause and which is the effect.
+
+In summary, bad data quality undermines the validity and reliability of statistical analyses, making it challenging, if not impossible, to conduct accurate causal inference. Therefore we can't make any causal inference on what causes mental health problems based on the current data.
 
 ### Structure of the project
 
