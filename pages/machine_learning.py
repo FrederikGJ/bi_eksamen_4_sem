@@ -51,7 +51,7 @@ def show():
     ############################################
     display_merged_data(merged_file_path)
     ####################################################
-    # her beskriver jeg hilken data jeg vælger
+    # her beskriver jeg hvilken data jeg vælger
     ############################################
     display_merged_data(process_and_merge_data(merged_file_path))
 
