@@ -121,3 +121,4 @@ def apply_pca(data,numeric_features, n_components=None):
     loadings = pca.components_
 
     return pca, data_scaled, loadings 
+
