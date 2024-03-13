@@ -80,10 +80,6 @@ def show():
     5. Presentation of Results: The program then displays the result of the sentiment analysis, including the polarity value, providing users with a numerical representation of the text's emotional tone.
     """)
     
-    #############################################################################################################################################
-    st.title("#### add the definition of vector from the linear algebra for non mathematicians book and explain the NLP process")
-#############################################################################################################################################
-
     st.divider()
 
     st.subheader("Sentiment analysis")
