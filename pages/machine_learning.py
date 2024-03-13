@@ -58,6 +58,18 @@ def show():
               It combines techniques from computer science and linguistics to bridge the gap between human
               communication and computer processing.""")
     
+    st.markdown("""
+    1. Text Vectorization: The first step in many NLP tasks is to convert text into a form that computers can understand and work with. This step is called vectorization. In your code, when you process the text with nlp(text), internally a form of vectorization occurs, where text (words, sentences) is transformed into numerical vectors. This allows the machine to analyze the language using mathematical and statistical methods.
+
+    2. Language Model Application: Once the text is vectorized, the program uses a language model (here en_core_web_sm) to understand the contextual meaning of each word and sentence. The language model contains information about grammar, word meanings, and how words are typically combined in the language.
+
+    3. Adding Sentiment Analysis: By adding spacytextblob to the spaCy pipeline, sentiment analysis is integrated into the process. TextBlob calculates the sentiment for the entire document, resulting in a polarity value. This value indicates whether the overall sentiment in the text is positive, neutral, or negative.
+
+    4. Sentiment Evaluation: The polarity value obtained from TextBlob indicates the text's sentiment on a scale from -1 to 1. This step involves analyzing how the words in the text contribute to an overall emotional tone.
+
+    5. Presentation of Results: The program then displays the result of the sentiment analysis, including the polarity value, providing users with a numerical representation of the text's emotional tone.
+    """)
+    
     #############################################################################################################################################
     st.title("#### add the definition of vector from the linear algebra for non mathematicians book and explain the NLP process")
 #############################################################################################################################################
