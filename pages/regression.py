@@ -245,5 +245,10 @@ def load_data():
 
     #######################################################################################################################################
 
+    st.subheader("Conclusion")
+    st.write("We initially tried to perform a linear regression analysis but the model failed to capture a linear pattern.  Then we tried to peform a polynomial regression analysis to predict the number of suicides. We have evaluated the polynomial regression model and there could maybe be some overfitting. However it has been difficult to make a model that fits the data well. It was a challenge that there were limitations of the dataset (suicide.csv). The data showed some variability, with certain years featuring data from only a few countries, while other years included data from more countries. This uneven distribution made it challenging to see a consistent pattern in our data. We can also see from the correlation matrix that most of the variables do not have linear relationship or even close to one.  ")
+
+
+
 def show():
     load_data()
