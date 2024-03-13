@@ -51,7 +51,18 @@ def show():
     ax.set_ylabel('Explained Variance Ratio')
     ax.set_title('PCA - Explained Variance Ratio - scree plot')
     st.pyplot(fig)
-    st.write("The plot shows the eigenvalues of the each principal component. The eigenvalues are the variance of the original data projected onto the principal components. ")
+    st.write("""
+             The plot shows the eigenvalues of the each principal component. 
+             The eigenvalues are the relative variance of the original data projected onto the principal components. 
+             If we want the variance for the PCs we divide the eigenvalues by the number of observations -1 (n - 1). 
+             """)
+        
+    
+    st.latex(r"Eigenvalue\ =\ Sum\ of\ Squared\ Distances\ along\ a\ Principal\ Component")
+    st.latex(r"Sum\ of\ Squared\ Distances\ = \sum_{i=1}^{n} d_i^2")
+    st.latex(r"Variance = \frac{\sum_{i=1}^{n} d_i^2}{n-1}")
+    st.latex(r"Where\ n\ is\ the\ number\ of\ datapoints\ in\ the\ dataset")
+
     
     # Make new dataframe that has the first 4 principal components
     st.write('First 4 principal components - projection of each data point onto the principal components.')
