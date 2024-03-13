@@ -1,11 +1,12 @@
 import streamlit as st
-from pages import descriptive_stats, introduction, pca, regression, machine_learning  # Importer siderne
+from pages import descriptive_stats, introduction, pca, regression, machine_learning, cleaning_data  # Importer siderne
 
 # lolo frederiks branch
 
 # Funktioner for hver side
 pages = {
     "Introduction": introduction.show,
+    "Cleaned data": cleaning_data.show,
     "Descriptive statistics": descriptive_stats.show,
     "PCA": pca.show,
     "Regression": regression.show,

@@ -5,7 +5,7 @@ import seaborn as sns
 
 def show():
     # Indlæs data
-    data = pd.read_csv('data/SDGSUICIDE.csv')
+    data = pd.read_csv('data/csv/SDGSUICIDE.csv')
 
     # App titel
     st.title("Mental health and suicide rates in the world")
