@@ -12,6 +12,16 @@ def show():
     st.write("- Natasja Karoline Duckfeldt Vitoft Nordstedt")
 
     st.markdown("""
+        ## Structure of the project
+
+        Our project is structured in the following manner.
+
+        1. Introduction and Cleaned Data Preview
+        2. Descriptive statistics
+        3. PCA
+        4. Regression
+        5. Machine learning        
+        
         # Introduction
 
         ## Mental health and suicide - global and personal perspectives
@@ -81,15 +91,7 @@ def show():
 
         In summary, bad data quality undermines the validity and reliability of statistical analyses, making it challenging, if not impossible, to conduct accurate causal inference. Therefore we can't make any causal inference on what causes mental health problems based on the current data.
 
-        ### Structure of the project
 
-        Our project is structured in the following manner.
-
-        1. Introduction and Cleaned Data Preview
-        2. Descriptive statistics
-        3. PCA
-        4. Regression
-        5. Machine learning
     """)
 
     # Indlæs data
