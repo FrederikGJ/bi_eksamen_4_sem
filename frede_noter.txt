@@ -1,20 +1,12 @@
-Opgaven ----------
---------
-data sources
-reliability in data - lacking quality for most regions
-confounders and not being able to make causal inference based on the data 
-
-add latex equations to pca part ??? maybe not actually - maybe just SSD along the pc -> for eigenvalue -> and then to variance 
-____________________
-
-noter om datakvalitet 
-vi kan sammenligne det data vi bruger op mod de 16 principper for statistik fra eurostat
+Opgaven 
 ____________________
 
 konklusion - sammenhænge, svagheder, metoder, datakvalitet, confounders, resourcer ift scope osv osv osv....
 _______________________
 
 :::::
+Links ift datakvalitet
+_______________________________________
 
 https://www.dst.dk/da/OmDS/strategi-og-kvalitet/kvalitet-for-statistikproduktion/kvalitet-i-officiel-statistik
 https://ec.europa.eu/eurostat/web/quality/european-quality-standards/european-statistics-code-of-practice
@@ -25,7 +17,7 @@ https://www.dst.dk/da/OmDS/strategi-og-kvalitet/kvalitet-for-statistikproduktion
 
 ***********
 
-suicide note collection til tf-idf 
+suicide note collection 
 
 https://github.com/CodeWritingCow/suicide-notes/tree/master/collection
 
