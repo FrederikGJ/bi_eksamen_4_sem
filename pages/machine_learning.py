@@ -62,6 +62,15 @@ def show():
     st.markdown("""
     1. Text Vectorization: The first step in many NLP tasks is to convert text into a form that computers can understand and work with. This step is called vectorization. In your code, when you process the text with nlp(text), internally a form of vectorization occurs, where text (words, sentences) is transformed into numerical vectors. This allows the machine to analyze the language using mathematical and statistical methods.
 
+    ***Definition of a vector from the book Linear Algebra for Non-Mathematicians by Sapir:***
+    > ”The Physicist’s definition”: An object that has a magnitude and a direction (a geometric definition).
+    >
+    > ”The Computer scientists’ definition”: An array of numbers (an arithmetic definition).
+    >
+    > ”The Mathematician’s definition”: An element of a vector space (an abstract definition).
+                
+    *Sapir, P B. (2020) Basic Linear Algebra for Non-Mathematicians. [Lecture notes]. Page 27*
+                
     2. Language Model Application: Once the text is vectorized, the program uses a language model (here en_core_web_sm) to understand the contextual meaning of each word and sentence. The language model contains information about grammar, word meanings, and how words are typically combined in the language.
 
     3. Adding Sentiment Analysis: By adding spacytextblob to the spaCy pipeline, sentiment analysis is integrated into the process. TextBlob calculates the sentiment for the entire document, resulting in a polarity value. This value indicates whether the overall sentiment in the text is positive, neutral, or negative.
