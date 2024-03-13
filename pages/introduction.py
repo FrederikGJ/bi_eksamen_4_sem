@@ -23,21 +23,29 @@ def show():
 
     # Rå data preview
     st.subheader("Raw data preview")
-    st.write(" Here you have a view of the  data in the same form that it was collected. We clean the data by removing column that hold non-descriptive data (such as URL), removing/replacing NaN values and convert some values to numeric.  ")
-    st.write("Tabel 1: Suicide data from 2019")
+    st.write("""
+    In this section, we present the original form of the data as it was collected. Our data cleaning process involves several steps:
+
+    1. Removal of non-descriptive columns: We eliminate columns containing non-informative data, such as URLs or other irrelevant information.
+    2. Handling missing values: We address NaN (Not a Number) values by either removing or replacing them with appropriate substitutes.
+    3. Conversion to numeric: We convert relevant data values into numeric format, facilitating statistical analysis and visualization.
+
+    By undertaking these cleaning procedures, we ensure the integrity and reliability of the data for subsequent analysis and interpretation.
+    """)
+    st.write(" **Tabel 1: Suicide data from 2019** ")
     st.write(data.head())
-    st.write("Tabel 2: Suicide data from 1987 - 2016")
+    st.write(" **Tabel 2: Suicide data from 1987 - 2016** ")
     st.write(data1.head())
-    st.write("Tabel 3: Mental health facilities data from 2016")
+    st.write(" **Tabel 3: Mental health facilities data from 2016** ")
     st.write(data2.head()) 
-    st.write("Tabel 4: Human ressources data from 2016")
+    st.write(" **Tabel 4: Human ressources data from 2016**")
     st.write(data3.head())
 
     # Renset data preview
     st.subheader("Cleaned data preview")
 
-    st.write("Tabel 1: Suicide data from 2019. ")
-    st.write("Sex have been set to both genders (BTSX). Non-descriptive columns have been removed. Rows  with null values have been removed.")
+    st.write(" **Tabel 1: Suicide data from 2019.** ")
+    st.write("Gender has been standardized to include both sexes (BTSX). Non-informative columns have been eliminated, and rows containing null values have been excluded.")
     columns_to_remove = ['GHO (CODE)', 'GHO (DISPLAY)', 'GHO (URL)', 'PUBLISHSTATE (CODE)', 'PUBLISHSTATE (DISPLAY)', 'PUBLISHSTATE (URL)', 'YEAR (CODE)', 'YEAR (URL)', 'REGION (CODE)', 'REGION (URL)', 'WORLDBANKINCOMEGROUP (CODE)', 'WORLDBANKINCOMEGROUP (URL)', 'COUNTRY (CODE)', 'COUNTRY (URL)', 'AGEGROUP (CODE)', 'AGEGROUP (URL)','SEX (DISPLAY)' 'SEX (URL)', 'Low', 'High', 'StdErr', 'StdDev', 'Comments']
     remove_columns = data.drop(columns=columns_to_remove, errors='ignore')
     cleaned_data = remove_columns[remove_columns['SEX (CODE)'] == 'BTSX'].dropna(axis=1, how='all')
@@ -45,8 +53,8 @@ def show():
     st.session_state.cleaned_data = cleaned_data
     
 
-    st.write("Tabel 2: Suicide data from 1987 - 2016.")
-    st.write("Non-descriptive columns have been removed. Rows  with null values have been removed.")
+    st.write(" **Tabel 2: Suicide data from 1987 - 2016.** ")
+    st.write("Columns lacking descriptive relevance have been eliminated. Rows containing null values have been excluded.")
     columns_to_remove1 = ['year', 'suicides_no','country-year', 'HDI for year']
     remove_columns1 = data1.drop(columns = columns_to_remove1, errors ='ignore')
     cleaned_data1 = remove_columns1.dropna(axis=1, how='all')
@@ -54,8 +62,8 @@ def show():
     st.session_state.cleaned_data1 = cleaned_data1 # save data
 
 
-    st.write("Tabel 3: Mental health facilities data from 2016")
-    st.write("Non-descriptive columns have been removed. Rows  with null values have been removed (this has removed some countries).")
+    st.write(" **Tabel 3: Mental health facilities data from 2016** ")
+    st.write("Columns deemed non-descriptive have been discarded. Rows containing null values have been omitted, resulting in the exclusion of certain countries.")
     columns_to_remove2 = ['Year']
     remove_columns2 = data2.drop(columns = columns_to_remove2, errors ='ignore')
     cleaned_data2 = remove_columns2.dropna()
@@ -63,8 +71,8 @@ def show():
     st.session_state.cleaned_data2 = cleaned_data2 # save data
 
 
-    st.write("Tabel 4: Human ressources data from 2016")
-    st.write("Non-descriptive columns have been removed. Rows  with null values have been removed (this has removed some countries).")
+    st.write(" **Tabel 4: Human ressources data from 2016** ")
+    st.write("Columns deemed non-descriptive have been discarded. Rows containing null values have been omitted, resulting in the exclusion of certain countries.")
     columns_to_remove3 = ['Year'] 
     remove_columns3 = data3.drop(columns = columns_to_remove3, errors ='ignore')
     cleaned_data3 = remove_columns3.dropna()

@@ -82,10 +82,10 @@ def show():
     #Tabel 1
     st.write(""" **What is a Z-score ?**
              
-A Z-score indicates how many standard deviations a data point is from the mean. A positive Z-score suggests that the data point is above the mean, while a negative Z-score indicates it is below the mean.
-Z-scores are commonly used to identify outliers in a dataset. Data points with Z-scores significantly greater than or less than a threshold value (typically 2 or 3) are considered outliers and may warrant further investigation.
-In our application, we utilize Z-score based outlier identification to ensure the integrity of our statistical analyses and to identify potential anomalies within the mental health data we explore.
-""")
+    A Z-score indicates how many standard deviations a data point is from the mean. A positive Z-score suggests that the data point is above the mean, while a negative Z-score indicates it is below the mean.
+    Z-scores are commonly used to identify outliers in a dataset. Data points with Z-scores significantly greater than or less than a threshold value (typically 2 or 3) are considered outliers and may warrant further investigation.
+    In our application, we utilize Z-score based outlier identification to ensure the integrity of our statistical analyses and to identify potential anomalies within the mental health data we explore.
+    """)
     outlier_removal = st.checkbox('Remove outliers based on Z-scores?')
     if outlier_removal:
         cleaned_data = identify_outliers(cleaned_data.copy(), 'Numeric')  
