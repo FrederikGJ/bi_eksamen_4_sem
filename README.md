@@ -68,7 +68,7 @@ streamlit run app.py
 
 ## pip install
 ```bash
-pip install streamlit pandas matplotlib seaborn 
+pip install -r requirements.txt
 ```
 
 if on mac isntall watchdog with pip as well 
