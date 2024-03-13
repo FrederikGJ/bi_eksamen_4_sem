@@ -70,18 +70,18 @@ def show():
 
     st.write("""
             The polarity score is sligtly positive. This is not expected beacuse the
-             letters we analyze are suicide letters.
+             notes we analyze are suicide letters.
 
-             Given the relatively small sample size (16) of letters we won't be making nay strong 
+             Given the relatively small sample size (16) of letters we won't be making any strong 
              conlusions. But it could be interesting to understand why the polarity score isn't negative.
 
              One palusible explanation is that suicide letters are very domain specific
              and the model is not trained specifically for that. Another plausible explanation is that
              the people writing the letters are feeling relief beacuase they have wanted to commit suicide 
-             is feeling relief. 
+             for a long time. But without the involvement of mental helath professionals it is hard to say. 
 
              Further investigation could be interesting. Maybe a model trained with Reinforcement Leaning (RF) 
-             made in colalboration with mental health professionals would give a more realistc score. 
+             made in colalboration with mental health professionals would give a more realistc score.
             """)
 
 
