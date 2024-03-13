@@ -54,13 +54,9 @@ But if it would ever be possible an implementation of something like European St
 
 _European Statistical System Committee, 2017. European Statistics Code of Practice for the National Statistical Authorities and Eurostat (EU statistical authority). Adopted 16 November 2017. [online] Available at: [[URL](https://ec.europa.eu/eurostat/web/products-catalogues/-/ks-02-18-142)] [12/03/2024]._
 
-### An epistemological persepctive
-
-    # - realiability in the project - an epistemological view
-
 ### Causal Inference based on the data
 
-    # causal inference (confounders) - RCT needed for someitng approximating a cirtain causal inference
+
 
 ### Structure of the project
 
