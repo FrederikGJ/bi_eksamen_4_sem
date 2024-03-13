@@ -53,11 +53,12 @@ def show():
     st.divider()
 
     st.subheader("Natural Language Processing")
+    st.write("A definiton of NLP:")
     st.write("""NLP (Natural Language Processing) is a field within artificial intelligence 
              that focuses on enabling computers to understand, interpret, and generate human language.
               It combines techniques from computer science and linguistics to bridge the gap between human
               communication and computer processing.""")
-    
+    st.write("The NLP process we use when doing sentiment analysis:")
     st.markdown("""
     1. Text Vectorization: The first step in many NLP tasks is to convert text into a form that computers can understand and work with. This step is called vectorization. In your code, when you process the text with nlp(text), internally a form of vectorization occurs, where text (words, sentences) is transformed into numerical vectors. This allows the machine to analyze the language using mathematical and statistical methods.
 
