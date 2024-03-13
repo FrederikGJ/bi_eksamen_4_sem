@@ -57,6 +57,17 @@ def show():
 
     st.divider()
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+ 
+
+>>>>>>> 78de265c04a76cd37beac885b51b1661824e8e37
 def apply_pca(data, n_components=None):
     # Ensure data is numeric
     numeric_features = data.select_dtypes(include=[np.number])
