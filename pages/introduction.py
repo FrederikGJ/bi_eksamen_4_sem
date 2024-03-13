@@ -5,12 +5,6 @@ import pandas as pd
 def show():
     st.title("Mental health and suicide")
 
-    st.subheader("Group: OLA_Gruppe14")
-    
-    st.write("- Frederik Geisler Johannessen")
-    st.write("- Signe Krusell Larsen")
-    st.write("- Natasja Karoline Duckfeldt Vitoft Nordstedt")
-
     st.markdown("""
         ## Structure of the project
 
@@ -33,7 +27,7 @@ def show():
         Some goes as far as calling it a mental health pandemic. In our project we want to investigate this,
         by looking at quantitative data from the WHO (World Health Organisation) and qualitative data from
         a collection of suicide notes.
-        We use suicide rates as a proxy for the mental health state of peoples across the globe. And the suicide notes to investigate the subjective mental state of someone who is severely depressed. So we look at the problem of mental health problems from both a macro and micro persepektive. Both the global and the local perspective.
+        We use suicide rates as a proxy for the mental health state of peoples across the globe. And the suicide notes to investigate the subjective mental state of someone who is severely depressed.
 
         The question we seek to answer: what are the soci-economic and personal causes of mental health problems?
 
