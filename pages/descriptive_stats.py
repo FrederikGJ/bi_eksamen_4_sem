@@ -80,7 +80,7 @@ def show():
 
     # Plotting distribution of suicide rates per region
     #Tabel 1
-    st.write(""" **What is a Z-score ? **
+    st.write(""" **What is a Z-score ?**
              
 A Z-score indicates how many standard deviations a data point is from the mean. A positive Z-score suggests that the data point is above the mean, while a negative Z-score indicates it is below the mean.
 Z-scores are commonly used to identify outliers in a dataset. Data points with Z-scores significantly greater than or less than a threshold value (typically 2 or 3) are considered outliers and may warrant further investigation.

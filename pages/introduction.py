@@ -5,15 +5,11 @@ import pandas as pd
 def show():
     st.title("Mental health and suicide rates in the world")
 
-    st.subheader("Group:")
-
-    st.write("Group: OLA_Gruppe14")
+    st.subheader("Group: OLA_Gruppe14")
     
-    st.write("Group Members:")
     st.write("- Frederik Geisler Johannessen")
     st.write("- Signe Krusell Larsen")
     st.write("- Natasja Karoline Duckfeldt Vitoft Nordstedt")
-
 
     st.subheader("Introduction to our project")
     st.write("**MANGLER AT SKRIVE EN INTRO**")
@@ -27,6 +23,7 @@ def show():
 
     # Rå data preview
     st.subheader("Raw data preview")
+    st.write(" Here you have a view of the  data in the same form that it was collected. We clean the data by removing column that hold non-descriptive data (such as URL), removing/replacing NaN values and convert some values to numeric.  ")
     st.write("Tabel 1: Suicide data from 2019")
     st.write(data.head())
     st.write("Tabel 2: Suicide data from 1987 - 2016")
