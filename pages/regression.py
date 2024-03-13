@@ -182,8 +182,8 @@ def load_data():
     a, b, c, d = model.coefficients
 
     # Our equation based on the coefficients becomes:
-    st.write("The equation for the polynomial regression model based on our data becomes: ")
-    st.latex(f"f(x) = {a:.2f}x^3 + {b:.2f}x^2 + {c:.2f}x + {d:.2f}")
+    # st.write("The equation for the polynomial regression model based on our data becomes: ")
+    # st.latex(f"f(x) = {a:.2f}x^3 + {b:.2f}x^2 + {c:.2f}x + {d:.2f}")
 
     # Model evaluation
 
