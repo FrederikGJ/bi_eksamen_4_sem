@@ -31,23 +31,25 @@ In the EU efforts are made through Eurostat, to enhance data quality acorss the 
 
 But if it would ever be possible an implementation of something like European Statistics Code of Practice on a global level would enable data scientists all over the world, to do productive reaseach for the benefit of mankind. 
 
-The European European Statistics Code of Practice has 16 principles, which are the following:
-    Professional Independence: Ensuring the independence of statistical authorities from political and other external interference.
-    Mandate for Data Collection and Access to Data: Clear legal mandate for statistical authorities to collect and access data for European statistical purposes.
-    Adequacy of Resources: Sufficient resources to meet European statistics requirements.
-    Commitment to Quality: Continuous improvement of process and output quality by statistical authorities.
-    Statistical Confidentiality and Data Protection: Guaranteeing the privacy and confidentiality of data providers and the information they provide.
-    Impartiality and Objectivity: Development, production, and dissemination of statistics in an objective and transparent manner.
-    Sound Methodology: Use of appropriate methodologies underpinning quality statistics.
-    Appropriate Statistical Procedures: Implementation of suitable statistical procedures throughout statistical processes.
-    Non-excessive Burden on Respondents: Minimization of response burden for respondents.
-    Cost Effectiveness: Effective use of resources in statistical processes.
-    Relevance: Meeting the needs of users with European statistics.
-    Accuracy and Reliability: Portrayal of reality in a reliable and accurate manner by European statistics.
-    Timeliness and Punctuality: Timely and punctual release of European statistics.
-    Coherence and Comparability: Ensuring statistics are internally consistent and comparable across regions and countries.
-    Accessibility and Clarity: Clear and understandable presentation of European statistics, with accessible supporting metadata and guidance.
-    Coordination and Cooperation: Coordination and active cooperation within the European Statistical System to ensure the development, production, and dissemination of European statistics.
+**The European European Statistics Code of Practice has 16 principles, which are the following**
+
+> **Professional Independence**: Ensuring the independence of statistical authorities from political and other external interference.
+> **Mandate for Data Collection and Access to Data**: Clear legal mandate for statistical authorities to collect and access data for European statistical purposes.
+> **Adequacy of Resources**: Sufficient resources to meet European statistics requirements.
+> **Commitment to Quality**: Continuous improvement of process and output quality by statistical authorities.
+> **Statistical Confidentiality and Data Protection**: Guaranteeing the privacy and confidentiality of data providers and the information they provide.
+> **Impartiality and Objectivity**: Development, production, and dissemination of statistics in an objective and transparent manner.
+> **Sound Methodology**: Use of appropriate methodologies underpinning quality statistics.
+> **Appropriate Statistical Procedures**: Implementation of suitable statistical procedures throughout statistical processes.
+> **Non-excessive Burden on Respondents**: Minimization of response burden for respondents.
+> **Cost Effectiveness**: Effective use of resources in statistical processes.
+> **Relevance**: Meeting the needs of users with European statistics.
+> **Accuracy and Reliability**: Portrayal of reality in a reliable and accurate manner by European statistics.
+> **Timeliness and Punctuality**: Timely and punctual release of European statistics.
+> **Coherence and Comparability**: Ensuring statistics are internally consistent and comparable across regions and countries.
+> **Accessibility and Clarity**: Clear and understandable presentation of European statistics, with accessible supporting metadata and guidance.
+> **Coordination and Cooperation**: Coordination and active cooperation within the European Statistical System to ensure the development, production, and dissemination of European statistics.
+
 
 _European Statistical System Committee, 2017. European Statistics Code of Practice for the National Statistical Authorities and Eurostat (EU statistical authority). Adopted 16 November 2017. [online] Available at: [[URL](https://ec.europa.eu/eurostat/web/products-catalogues/-/ks-02-18-142)] [12/03/2024]._
 
