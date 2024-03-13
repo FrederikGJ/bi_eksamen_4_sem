@@ -78,6 +78,8 @@ def show():
     st.divider()
 
     st.subheader("Sentiment analysis")
+
+    st.write("We do a sentiment analysis with a word cloud. The word cloud is a visual representation of the most common words in the text. The more frequent a word is, the larger it appears in the word cloud.")
     
     sentiment_analysis(process_and_merge_data(merged_file_path))
 
