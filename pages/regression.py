@@ -20,7 +20,7 @@ def load_data():
 
     df = pd.read_csv('data\csv\suicide2019_cleaned.csv')
 
-    st.write("The data has already been cleaned a bit. We have removed some columns that we dont need and that had too many missing values. We have also made some of the columns numeric, so we can use them in our analysis")
+    st.write("The data has already been cleaned a bit. We have removed some columns like the generation and country-year columns, because we dont need them for the regression part of the analysis. We have also removed the HDI for year column because it had too many missing values. Some of the columns have been converted to a numeric type, so we can use them in our analysis. The column 'sex' and 'age' have been converted to a numeric type.")
     st.write("First 10 rows of the dataset:")
     st.write(df.head(10))
 
@@ -59,7 +59,7 @@ def load_data():
 
     # Display correlation matrix
     st.subheader("Correlation Matrix")
-    st.write("We are using the correlation matrix to display the correlation coefficients between the different variables. A lot of the variables are close to 0 which means that there are no correlation or a weak correlation between them. Some of the variables - like suicides_no and GPD pr year - have a correlation closer to 1 which means that there is a stronger positive correlation.")
+    st.write("We are using the correlation matrix to display the correlation coefficients between the different variables. A lot of the variables are close to 0 which means that there are no correlation or a weak correlation between them. Some of the variables, like suicides_no and GPD pr year, do have a correlation closer to 1 which means that there is a stronger positive correlation.")
 
     correlation_matrix = df_numeric.corr()
     sns.heatmap(correlation_matrix, annot=True, cmap="RdBu_r", center=0, linewidths=.5)
@@ -139,7 +139,7 @@ def load_data():
     st.subheader("Polynomial regression")
 
     # Polynomial regression model
-    st.write("We will now try to fit a polynomial regression model to our data. We will use a 3rd degree polynomial, which is a cubic function. The cubic function is defined as:")
+    st.write("We will now try to fit a polynomial regression model to our data. We will use a 3rd degree polynomial, which is defined as:")
     
     st.latex("f(x) = ax^3 + bx^2 + cx + d")
 
@@ -149,7 +149,7 @@ def load_data():
     # Scatter plot
     fig, ax = plt.subplots()
     ax.scatter(X, y)
-    st.write("Total suicides from 1987 - 2015")
+    st.write("Scatter plot with total suicides from 1987 - 2015:")
     st.pyplot(fig)
 
     model = np.poly1d(np.polyfit(X, y, 3))
@@ -188,10 +188,10 @@ def load_data():
     # Model evaluation
 
     st.subheader("Model evaluation")
-    st.write("What we need to consider about our model to avoid overfitting: ")
-    st.write("- The model is too complex and fits the training data too well. It will not generalize well to new data.")
+    st.write("What we need to consider about our model to avoid overfitting is: ")
+    st.write("- If the model is too complex and fits the training data too well. It will not generalize well to new data.")
     st.write("- If the curve is too complex. Maybe the curve is to wiggly and not smooth")
-    st.write("- The variance in R-squares between the test set and the training set should be minimal. A significant disparity suggests potential overfitting")
+    st.write("- If the variance in R-squares between the test set and the training set should be minimal. A significant difference suggests potential overfitting")
     
 
     st.subheader("Evaluation:")
@@ -220,7 +220,7 @@ def load_data():
     st.write("R-squared for training sets across iterations:", train_r2_scores) 
     st.write("R-squared for test sets across iterations:", test_r2_scores)
 
-    st.write("Most of the R-sqaures for both the training sets and the test sets are close to 1. This is a good sign because a higher R square score indicates that a larger portion of the variance is captured by the model. However we have to compare the R square from the test set to the training set to see if the model is overfitting. If the R square for the test set is much lower than the training set, it is a sign of overfitting. For the 10 iterations the R square for the test set and training set are generally close. However some of them are not close enough, which is a sign of overfitting, so we should consider making a simpler model. We tried to change the degree from '3' to '2' but the r sqaure for the test set was even lower.")
+    st.write("Most of the R-sqaures for both the training sets and the test sets are close to 1. This is a good sign because a higher R square score indicates that a larger portion of the variance is captured by the model. However we have to compare the R square from the test set to the training set to see if the model is overfitting. If the R square for the test set is much lower than the training set, it is a sign of overfitting. For the 10 iterations the R square for the test set and training set are generally close. However some of them are not close enough and a few are very far apart, which is a sign of overfitting, so we should consider making a simpler model. We tried to change the degree from '3' to '2' but the r sqaure for the test set was even lower and the difference between the test and training sets were even bigger.")
 
     st.subheader("Error metrics")
     st.write("We can use the mean squared error (MSE), mean absolute error (MAE) and root mean squared error (RMSE) to evaluate the performance of our model. We will calculate these metrics for both the training and test sets.")
