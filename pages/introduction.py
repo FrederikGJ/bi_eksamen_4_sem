@@ -4,6 +4,7 @@ import pandas as pd
 
 def show():
     st.title("Mental health and suicide rates in the world")
+    st.divider()
 
     st.subheader("Group: OLA_Gruppe14")
     
@@ -13,6 +14,7 @@ def show():
 
     st.subheader("Introduction to our project")
     st.write("**MANGLER AT SKRIVE EN INTRO**")
+    st.divider()
 
 
     # Indlæs data
@@ -40,6 +42,7 @@ def show():
     st.write(data2.head()) 
     st.write(" **Tabel 4: Human ressources data from 2016**")
     st.write(data3.head())
+    st.divider()
 
     # Renset data preview
     st.subheader("Cleaned data preview")

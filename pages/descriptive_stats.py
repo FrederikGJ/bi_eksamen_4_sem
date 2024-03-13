@@ -12,7 +12,7 @@ def identify_outliers(df, column_name, threshold=3.5):
 def show():
     # App titel
     st.title("Descriptive statistics")
-    st.write("Here we delve into the world of descriptive statistics, exploring datasets related to various aspects of mental health. Through statistical summaries and visualizations, we aim to gain insights into different metrics, such as suicide rates, mental health facilities, and human resources in the mental health sector. ")
+    st.write("Through statistical summaries and visualizations, we aim to gain insights into different metrics, such as suicide rates, mental health facilities, and human resources in the mental health sector. ")
     
     # Access the cleaned data from the session state
     cleaned_data = st.session_state.cleaned_data

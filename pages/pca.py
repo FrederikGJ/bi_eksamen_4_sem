@@ -15,7 +15,7 @@ def show():
     # Load data from CSV
     data = pd.read_csv("data/csv/suicide.csv")
 
-    st.write("Data raw")
+    st.write("Data ")
     st.write(data.head())
 
     # Filter the data to keep only the entries from the year 2014
