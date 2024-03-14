@@ -41,7 +41,8 @@ source env/bin/activate
 deactivate
 ```
 
-### for Windows:
+## Gå til branch Natasja_Eksamen for en version der virker på windows 
+### for Windows :
 
 ```bash
 python -m venv env
