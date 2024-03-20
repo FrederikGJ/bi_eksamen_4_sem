@@ -120,21 +120,7 @@ def display_merged_data(merged_file_path):
         st.text_area("Merged Data - in raw txt format", merged_data, height=200)
 
 
-def sentiment_analysis(merged_file_path):
-    # Load English model with spacytextblob for sentiment analysis
-    nlp = spacy.load('en_core_web_sm')
-    nlp.add_pipe('spacytextblob')
-
-    with open(merged_file_path, 'r') as file:
-        text = file.read()  # Read the entire file as a single string
-
-    # Perform sentiment analysis
-    doc = nlp(text)
-    sentiment = doc._.blob.polarity  # Get the overall polarity score
-
-    # Display the sentiment analysis result
-    st.write("Sentiment Analysis Result:")
-    st.write(f"Polarity (from -1 to 1, where -1 is negative and 1 is positive): {sentiment}")
+## removed redundant version of the apply PCA function
 
 
 def process_and_merge_data(input_file_path):
